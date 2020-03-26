@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap');
+
+#signature{
+    -ms-transform: skewY(-5deg); /* IE 9 */
+    transform: skewY(-5deg);
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 20px;
+    float: right;
+    right: 20%;
+    position: relative;
+}

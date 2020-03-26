@@ -1,0 +1,48 @@
+<div>
+    <div style="background-image: url(../../assets/flowers.jpg);height: 500px; background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;">
+    </div>
+    <div fxLayout="column"
+        style="background-color: #e6e6e6; text-align: center; border-bottom: 1px solid #c6c6c6;margin-bottom:40px;">
+        <h3 style="margin: 40px;">NASZA SZKÓŁKA</h3>
+        <p style="margin-bottom: 60px;">W naszej szkółce znajdziecie Państwo rośliny w pojemnikach, które można wysadzać przez cały okres wegetacyjny tj. od wczesnej wiosny do próżnej jesieni.
+            Dokładamy wszelkich starań, aby nasz materiał roślinny był najwyższej jakości . 
+            Z każdym sezonem zwiększamy nasz asortyment o ciekawe gatunki i odmiany, których stale przybywa na rynku ogrodniczym.
+            Zadowolenie i radość klientów to nasz priorytet.</p>
+    </div>
+    <div style=" border-bottom: 1px solid rgb(198, 198, 198);">
+        <div style="max-width: 1000px; margin: auto;">
+            <h4>Posiadamy:</h4>
+            <ul style="list-style-type: none;">
+                <div *ngFor="let item of bushesList;">
+                    <li >
+                        <mat-icon style="position: relative; top:6px;"> local_florist</mat-icon>
+                        <b>{{item.type}}</b>
+                    </li>
+                    <p>{{item.description}}</p>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div style="background-image: url(../../assets/plant/1-min.jpg);height: 500px; background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
+    </div>
+    <app-images-for-garden></app-images-for-garden>
+    <div fxLayout="column"
+        style="background-color: #e6e6e6;align-items: center;padding: 60px; border-top: 1px solid rgb(198, 198, 198);">
+        <p style="font-size: 20px; text-align: center;">Jeśli chcesz zobaczyć wiecej zdjęc to zapraszamy na naszą stronę
+            na facebooku! Link znajdziesz na dole strony.</p>
+        <button style="border-radius: 50%;padding: 0; width: 50px; height: 50px;" (click)="scrollDownPage()" mat-button>
+            <mat-icon style="font-size: 50px;width: 50px; height: 50px;">expand_more</mat-icon>
+        </button>
+    </div>
+    <div style="background-image: url(../../assets/plant/10-min.jpg);height: 500px; background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;">
+    </div>
+</div>
