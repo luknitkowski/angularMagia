@@ -10,21 +10,13 @@ export class MailSendService {
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
   sendMail(obj) {
-    console.log(obj);
-    this.snackBar.open('Wiadomość wysłana!', 'ok', {
-      duration: 2000,
-    });
-    const options = {
-      headers: new HttpHeaders({
-        'Content-Type': 'multipart/form-data'
-      })
-    }
-    const formData = new FormData();
-    formData.append('file', obj);
-    console.log(formData);
-    this.http.post<any>(`https://cors-anywhere.herokuapp.com/https://us-central1-magiaogrodow.cloudfunctions.net/sendMail?dest=luknitkowski@gmail.com`, formData, options).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err)
-    );
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    this.http.post('https://us-central1-magiaogrodow.cloudfunctions.net/sendMail?dest=luknitkowski@gmail.com', JSON.stringify(obj), {headers : headers})
+      .subscribe(
+        (res) => console.log(res),
+        (err) => console.log(err)
+      )
+      this.snackBar.open('Wiadomość wysłana!', 'ok', {duration: 2000,});
   }
 }
