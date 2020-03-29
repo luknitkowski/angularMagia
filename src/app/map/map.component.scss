@@ -13,3 +13,9 @@
 #map {
   height: 100%;
 }
+
+@media only screen and (max-width: 400px) {
+  .map-container {
+    max-width: 90%;
+  }
+}

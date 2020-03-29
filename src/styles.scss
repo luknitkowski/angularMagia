@@ -27,6 +27,7 @@ h5 {
     padding: 0;
     background: none;
     position: relative;
+    overflow: hidden;
   }
 }
 
@@ -39,6 +40,12 @@ button.active:focus {
 
 li {
   margin: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+  ul {
+    padding:0;
+  }
 }
 
 .carousel-control-prev:hover,
