@@ -1,32 +1,32 @@
-<div fxLayout="row" fxLayoutAlign="space-between" style="padding:10px;">
+<div fxLayout="row" fxLayoutAlign="space-between" class="menu-container">
     <img
-    style="margin-left: 20px;margin-right: 20px;"
+    class="menu-container__img-background"
     width="60"
     height="50"
     alt="Magia ogrodów Logo"
     src="../../assets/logo.png"
     />
   
-  <nav fxLayoutAlign="space-around" fxHide.sm fxHide.xs style="max-width: 1200px;">
-      <button routerLink="/o nas" routerLinkActive="active" style="font-size: 15px;" mat-button>O NAS</button>
-      <button routerLink="/szkolka" routerLinkActive="active" style="font-size: 15px;" mat-button>SZKÓŁKA ROŚLIN</button>
-      <button routerLink="/projekty" routerLinkActive="active" style="font-size: 15px;" mat-button>PROJEKTY</button>
-      <button routerLink="/zakladanie ogrodow" routerLinkActive="active" style="font-size: 15px;" mat-button>ZAKŁADANIE OGRODÓW</button>
-      <button routerLink="/pielegnacja ogrodow" routerLinkActive="active" style="font-size: 15px;" mat-button>PIELĘGNACJA OGRODÓW</button>
-      <button routerLink="/kontakt" routerLinkActive="active" style="font-size: 15px;" mat-button>KONTAKT</button>
+  <nav fxLayoutAlign="space-around" fxHide.sm fxHide.xs class="menu-container__nav">
+      <button routerLink="/o nas" routerLinkActive="active"  mat-button>O NAS</button>
+      <button routerLink="/szkolka" routerLinkActive="active"  mat-button>SZKÓŁKA ROŚLIN</button>
+      <button routerLink="/projekty" routerLinkActive="active"  mat-button>PROJEKTY</button>
+      <button routerLink="/zakladanie ogrodow" routerLinkActive="active"  mat-button>ZAKŁADANIE OGRODÓW</button>
+      <button routerLink="/pielegnacja ogrodow" routerLinkActive="active"  mat-button>PIELĘGNACJA OGRODÓW</button>
+      <button routerLink="/kontakt" routerLinkActive="active"  mat-button>KONTAKT</button>
   </nav>
-  <nav fxShow fxHide.gt-sm="false" fxHide.xs="false" fxHide.gt-sm="true" style="margin-left: auto; margin:right40px;">
+  <nav fxShow fxHide.gt-sm="false" fxHide.xs="false" fxHide.gt-sm="true" class="menu-container__nav-rwd">
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="rwd menu">
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/o nas" routerLinkActive="active" style="font-size: 15px;" >O NAS</button>
-      <button mat-menu-item routerLink="/szkolka" routerLinkActive="active" style="font-size: 15px;" >SZKÓŁKA ROŚLIN</button>
-      <button mat-menu-item routerLink="/projekty" routerLinkActive="active" style="font-size: 15px;" >PROJEKTY</button>
-      <button mat-menu-item routerLink="/zakladanie ogrodow" routerLinkActive="active" style="font-size: 15px;" >ZAKŁADANIE OGRODÓW</button>
-      <button mat-menu-item routerLink="/pielegnacja ogrodow" routerLinkActive="active" style="font-size: 15px;" >PIELĘGNACJA OGRODÓW</button>
-      <button mat-menu-item routerLink="/kontakt" routerLinkActive="active" style="font-size: 15px;" >KONTAKT</button>
+      <button mat-menu-item routerLink="/o nas" routerLinkActive="active"  >O NAS</button>
+      <button mat-menu-item routerLink="/szkolka" routerLinkActive="active"  >SZKÓŁKA ROŚLIN</button>
+      <button mat-menu-item routerLink="/projekty" routerLinkActive="active"  >PROJEKTY</button>
+      <button mat-menu-item routerLink="/zakladanie ogrodow" routerLinkActive="active"  >ZAKŁADANIE OGRODÓW</button>
+      <button mat-menu-item routerLink="/pielegnacja ogrodow" routerLinkActive="active"  >PIELĘGNACJA OGRODÓW</button>
+      <button mat-menu-item routerLink="/kontakt" routerLinkActive="active"  >KONTAKT</button>
     </mat-menu>
   </nav>
-  <div fxHide.sm fxHide.xs style="width: 40px;margin-left: 20px;margin-right: 20px;"></div>
+  <div fxHide.sm fxHide.xs class="menu-container__free-div"></div>
 </div>

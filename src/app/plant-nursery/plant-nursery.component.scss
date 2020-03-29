@@ -1,0 +1,70 @@
+.plant-nursery-container {
+  &__img-background {
+    background-image: url(../../assets/flowers.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__block-info {
+    border-bottom: 1px solid rgb(198, 198, 198);
+
+    &__block {
+      max-width: 1000px;
+      margin: auto;
+
+      ul {
+        list-style-type: none;
+      }
+
+      &__icon-plant {
+        position: relative;
+        top: 6px;
+      }
+    }
+  }
+
+  &__img-background-two {
+    background-image: url(../../assets/plant/1-min.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__info-two {
+    background-color: #e6e6e6;
+    align-items: center;
+    padding: 60px;
+    border-top: 1px solid rgb(198, 198, 198);
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    button {
+      border-radius: 50%;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    &__icon {
+      font-size: 50px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__img-background-three {
+    background-image: url(../../assets/plant/10-min.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

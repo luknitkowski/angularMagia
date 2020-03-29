@@ -1,0 +1,27 @@
+.footer-container {
+  background-color: lightgrey;
+
+  &__img {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -40px;
+  }
+
+  &__main-block {
+    margin-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &__img {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid gray;
+  }
+}

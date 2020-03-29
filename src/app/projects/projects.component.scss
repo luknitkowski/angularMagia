@@ -1,0 +1,38 @@
+.projects-container {
+  &__img-background {
+    background-image: url(../../assets/project.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__info-block {
+    background-color: #e6e6e6;
+    border-bottom: 1px solid #c6c6c6;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__info-block-two {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__list-projects {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+
+    ul {
+      list-style-type: none;
+    }
+
+    &__icon {
+      position: relative;
+      top: 6px;
+    }
+  }
+}

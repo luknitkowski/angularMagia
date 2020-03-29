@@ -1,11 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap");
 
-#signature{
-    -ms-transform: skewY(-5deg); /* IE 9 */
-    transform: skewY(-5deg);
-    font-family: 'Herr Von Muellerhoff', cursive;
-    font-size: 20px;
-    float: right;
-    right: 20%;
-    position: relative;
+.about-us-container {
+  &__image-background {
+    background-image: url(../../assets/dzialka.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__block-info {
+    text-align: center;
+    border-bottom: 1px solid rgb(198, 198, 198);
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #e6e6e6;
+  }
+
+  &__block-info-two {
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 50px;
+
+    &__signature {
+      -ms-transform: skewY(-5deg); /* IE 9 */
+      transform: skewY(-5deg);
+      font-family: "Herr Von Muellerhoff", cursive;
+      font-size: 20px;
+      float: right;
+      right: 20%;
+      position: relative;
+    }
+  }
+
+  &__main-block-info {
+    max-width: 1000px;
+    margin: auto;
+
+    &__block-img-info {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__img {
+        border-radius: 10px;
+        margin: auto;
+      }
+
+      &__info {
+        padding: 40px;
+
+        &__h5 {
+          text-align: center;
+        }
+      }
+    }
+  }
 }

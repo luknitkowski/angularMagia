@@ -1,37 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~leaflet/dist/leaflet.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto|Varela&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto|Varela&display=swap");
 
-html, body { 
-    height: 100%; 
+html,
+body {
+  height: 100%;
 }
 
-body { 
-    margin: 0; font-family: 'Roboto', 'Varela', "Helvetica Neue", sans-serif; 
+body {
+  margin: 0;
+  font-family: "Roboto", "Varela", "Helvetica Neue", sans-serif;
 }
 
-p,h1,h2,h3,h4,h5{
-    padding:10px;
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 10px;
 }
 
 .my-dialog {
-    .mat-dialog-container {
-		padding: 0;
-        background: none;
-        position: relative;
-     }
+  .mat-dialog-container {
+    padding: 0;
+    background: none;
+    position: relative;
+  }
 }
 
-button:focus, button:active:focus, button.active:focus {
-    outline: none !important;
-    outline-style: none !important;
+button:focus,
+button:active:focus,
+button.active:focus {
+  outline: none !important;
+  outline-style: none !important;
 }
 
-li{
-    margin: 20px;
+li {
+  margin: 20px;
 }
 
-.carousel-control-prev:hover, .carousel-control-next:hover{
- cursor: pointer;
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  cursor: pointer;
 }
