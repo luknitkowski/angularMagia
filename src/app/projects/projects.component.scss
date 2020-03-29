@@ -35,4 +35,16 @@
       top: 6px;
     }
   }
+
+  &__movie-block {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    border-top: 1px solid #c6c6c6;
+  }
+
+  iframe {
+    border-radius: 10px;
+    margin: auto;
+  }
 }

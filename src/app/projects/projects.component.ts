@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { Meta } from '@angular/platform-browser'; 
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +8,12 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
+  name = 'Magia Ogrodów';
+  safeSrc: SafeResourceUrl;
 
-  constructor(private meta: Meta) {
+  constructor(private meta: Meta, private sanitizer: DomSanitizer) {
     meta.addTag({name: 'keywords', content: 'projekty ogrodów, projekty, projects, garden projects'});
+    this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/gtWyCMKXjMk');
   }
 
 }
