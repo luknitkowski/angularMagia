@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ImagesForProjectService } from '../images-for-project.service';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {DialogPlantImageComponent} from '../dialog-plant-image/dialog-plant-image.component';
+import {GoogleAnalyticsService} from '../google-analytics.service';
 
 @Component({
   selector: 'app-images-for-garden',
@@ -11,9 +12,11 @@ import {DialogPlantImageComponent} from '../dialog-plant-image/dialog-plant-imag
 export class ImagesForGardenComponent implements OnInit {
   images: Array<string> = this.imagesForProjectService.getListOfPlantImages();
   breakpoint: number;
-  constructor(private imagesForProjectService: ImagesForProjectService, public dialog: MatDialog) { }
+  constructor(private imagesForProjectService: ImagesForProjectService, public dialog: MatDialog,
+              public googleAnalyticsService: GoogleAnalyticsService) { }
 
   bigViewPlantImage(index: number): void {
+    this.googleAnalyticsService.eventEmitter('Szkolka roslin', 'wybrany obrazek', `${index}`);
     const dialogRef = this.dialog.open(DialogPlantImageComponent, {
       panelClass: 'my-dialog',
       height: '80%',

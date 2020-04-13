@@ -8,24 +8,24 @@
     />
   
   <nav fxLayoutAlign="space-around" fxHide.sm fxHide.xs class="menu-container__nav">
-      <button routerLink="/o nas" routerLinkActive="active"  mat-button>O NAS</button>
-      <button routerLink="/szkolka" routerLinkActive="active"  mat-button>SZKÓŁKA ROŚLIN</button>
-      <button routerLink="/projekty" routerLinkActive="active"  mat-button>PROJEKTY</button>
-      <button routerLink="/zakladanie ogrodow" routerLinkActive="active"  mat-button>ZAKŁADANIE OGRODÓW</button>
-      <button routerLink="/pielegnacja ogrodow" routerLinkActive="active"  mat-button>PIELĘGNACJA OGRODÓW</button>
-      <button routerLink="/kontakt" routerLinkActive="active"  mat-button>KONTAKT</button>
+      <button (click)="trackMenuOption('o nas')" routerLink="/o nas" routerLinkActive="active"  mat-button>O NAS</button>
+      <button (click)="trackMenuOption('szkolka')" routerLink="/szkolka" routerLinkActive="active"  mat-button>SZKÓŁKA ROŚLIN</button>
+      <button (click)="trackMenuOption('projekty')" routerLink="/projekty" routerLinkActive="active"  mat-button>PROJEKTY</button>
+      <button (click)="trackMenuOption('zakladanie ogrodow')" routerLink="/zakladanie ogrodow" routerLinkActive="active"  mat-button>ZAKŁADANIE OGRODÓW</button>
+      <button (click)="trackMenuOption('pielegnacja ogrodow')" routerLink="/pielegnacja ogrodow" routerLinkActive="active"  mat-button>PIELĘGNACJA OGRODÓW</button>
+      <button (click)="trackMenuOption('kontakt')" routerLink="/kontakt" routerLinkActive="active"  mat-button>KONTAKT</button>
   </nav>
   <nav fxShow fxHide.gt-sm="false" fxHide.xs="false" fxHide.gt-sm="true" class="menu-container__nav-rwd">
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="rwd menu">
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/o nas" routerLinkActive="active"  >O NAS</button>
-      <button mat-menu-item routerLink="/szkolka" routerLinkActive="active"  >SZKÓŁKA ROŚLIN</button>
-      <button mat-menu-item routerLink="/projekty" routerLinkActive="active"  >PROJEKTY</button>
-      <button mat-menu-item routerLink="/zakladanie ogrodow" routerLinkActive="active"  >ZAKŁADANIE OGRODÓW</button>
-      <button mat-menu-item routerLink="/pielegnacja ogrodow" routerLinkActive="active"  >PIELĘGNACJA OGRODÓW</button>
-      <button mat-menu-item routerLink="/kontakt" routerLinkActive="active"  >KONTAKT</button>
+      <button mat-menu-item (click)="trackMenuOption('o nas')" routerLink="/o nas" routerLinkActive="active"  >O NAS</button>
+      <button mat-menu-item (click)="trackMenuOption('szkolka')" routerLink="/szkolka" routerLinkActive="active"  >SZKÓŁKA ROŚLIN</button>
+      <button mat-menu-item (click)="trackMenuOption('projekty')" routerLink="/projekty" routerLinkActive="active"  >PROJEKTY</button>
+      <button mat-menu-item (click)="trackMenuOption('zakladanie ogrodow')" routerLink="/zakladanie ogrodow" routerLinkActive="active"  >ZAKŁADANIE OGRODÓW</button>
+      <button mat-menu-item (click)="trackMenuOption('pielegnacja ogrodow')" routerLink="/pielegnacja ogrodow" routerLinkActive="active"  >PIELĘGNACJA OGRODÓW</button>
+      <button mat-menu-item (click)="trackMenuOption('kontakt')" routerLink="/kontakt" routerLinkActive="active"  >KONTAKT</button>
     </mat-menu>
   </nav>
   <div fxHide.sm fxHide.xs class="menu-container__free-div"></div>
