@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImagesForProjectService } from '../images-for-project.service';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {DialogPlantImageComponent} from '../dialog-plant-image/dialog-plant-image.component';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DialogPlantImageComponent } from '../dialog-plant-image/dialog-plant-image.component';
 
 @Component({
   selector: 'app-images-for-garden',
@@ -29,10 +29,10 @@ export class ImagesForGardenComponent implements OnInit {
 
   ngOnInit() {
     this.breakpoint = (window.innerWidth <= 350) ? 1 : (window.innerWidth <= 900) ? 2 : 3;
-}
+  }
 
-onResize(event) {
-  this.breakpoint = (window.innerWidth <= 350) ? 1 : (window.innerWidth <= 900) ? 2 : 3;
-}
+  onResize(event) {
+    this.breakpoint = (event.target.innerWidth <= 350) ? 1 : (event.target.innerWidth <= 900) ? 2 : 3;
+  }
 
 }

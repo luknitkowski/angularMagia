@@ -9,6 +9,8 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./gardening.component.scss']
 })
 export class GardeningComponent implements OnInit {
+  inRow:boolean;
+  inColumn:boolean;
 
   constructor(public dialog: MatDialog, private meta: Meta) {
     meta.addTag({name: 'keywords', content: 'zakładanie ogrodów, gardening'});
@@ -25,6 +27,24 @@ export class GardeningComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (window.innerWidth > 512) {
+      this.inRow = true; 
+      this.inColumn = false;
+    } else {
+      this.inRow = false; 
+      this.inColumn = true;
+    };
+  }
+
+  onResize(event) {
+    if (event.target.innerWidth > 512) {
+      this.inRow = true; 
+      this.inColumn = false;
+    } else {
+      this.inRow = false; 
+      this.inColumn = true;
+    };
+  }
 
 }

@@ -1,17 +1,17 @@
-<div class="gardening-container">
-    <div class="gardening-container__img-background">
+<div class="gardening-container" (window:resize)="onResize($event)">
+    <div class="gardening-container__img-background-two">
     </div>
     <div class="gardening-container__info">
         <div class="gardening-container__info__block">
-            <p>“Ogród powinien docierać do głębi. Odmienić serce, zasmucić, uszlachetnić. 
-                Jego rolą jest skłonić nas do zadumy nad przemijalnością wszystkiego, co nas otacza . 
-                Ten szczególny punkt w czasie, kiedy ostatni liść już-już ma opaść, gdy ostatni płatek już-już ma 
+            <p>“Ogród powinien docierać do głębi. Odmienić serce, zasmucić, uszlachetnić.
+                Jego rolą jest skłonić nas do zadumy nad przemijalnością wszystkiego, co nas otacza .
+                Ten szczególny punkt w czasie, kiedy ostatni liść już-już ma opaść, gdy ostatni płatek już-już ma
                 się osypać, ten moment zawiera wszystko, co w życiu piękne i bolesne.”
             </p>
-                <p class="gardening-container__info__signature">Tan Twan Eng</p>
+            <p class="gardening-container__info__signature">Tan Twan Eng</p>
         </div>
     </div>
-    <div class="gardening-container__example-projects">
+    <div class="gardening-container__example-projects" *ngIf="inRow">
         <div class="gardening-container__example-projects__div-project">
             <div class="gardening-container__example-projects__div-project__block" fxLayout="row" fxLayout.xs="column">
                 <div fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center">
@@ -170,8 +170,161 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="gardening-container__img-background-two">
+    <div class="gardening-container__example-projects" *ngIf="inColumn">
+        <div class="gardening-container__example-projects__div-project">
+            <div class="gardening-container__example-projects__div-project__block" fxLayout="row" fxLayout.xs="column">
+                <div fxFlex="50%" fxFlex.xs="100%" fxLayout="column">
+                    <h4 class="gardening-container__example-projects__div-project__block__h">Ogród przydomowy 845 m² –
+                        Rumia</h4>
+                    <h5 class="gardening-container__example-projects__div-project__block__h">Projekt: Beata Kulling-
+                        Nitkowska</h5>
+                    <p>Ogród został zmodernizowany ze starego ogrodu. Część roślin została zaadaptowana, jak na przykład
+                        wysoki żywopłot, dzięki temu uzyskaliśmy zieloną ścianę i intymność. Drugim zachowanym elementem
+                        są średniej wysokości żywopłoty bukszpanowe, które wyznaczyły strefy. Punktem centralnym stał
+                        się kwadrat , w którym znajduje się mini fontanna otoczona różami, szałwią i trawami. Przestrzeń
+                        ta przyciąga wzrok widza przez cały czas. Pozostałe strefy to skalniak przy altanie i trawnik na
+                        którym może odbywać się aktywność dzieci. Wprowadziliśmy rośliny kwitnące , jak : liliowce,
+                        przetaczniki, hortensje, rudbekie , rododendrony. Od wczesnej wiosny do jesieni cały czas coś
+                        kwitnie.</p>
+                    <div fxLayoutAlign="center" style="padding-bottom: 40px;">
+                        <button class="gardening-container__example-projects__div-project__block__button"
+                            mat-raised-button (click)="openProject('first')">SPRAWDŹ
+                            PROJEKT</button>
+                    </div>
+                </div>
+                <div fxFlex="50%" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center">
+                    <img class="gardening-container__example-projects__div-project__block__img" width="250" height="250"
+                        alt="face image" src="../../assets/project-images/first/1-min.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="gardening-container__example-projects__div-project">
+            <div class="gardening-container__example-projects__div-project__block" fxLayout="row" fxLayout.xs="column">
+                <div fxFlex="50%" fxFlex.xs="100%" fxLayout="column">
+                    <h4 class="gardening-container__example-projects__div-project__block__h">Ogród przydomowy 645 m² -
+                        Rumia</h4>
+                    <h5 class="gardening-container__example-projects__div-project__block__h">Projekt: Beata Kulling-
+                        Nitkowska</h5>
+                    <p>Przekształcenie zaniedbanego , starego ogrodu polegało na uporządkowaniu przestrzeni. Wprowadzono
+                        linie proste i geometryczne donice, dzięki temu pozbyliśmy się chaosu i zastanego bałaganu. Jak
+                        to w starszych ogrodach pozostawiliśmy roślinność , którą można poprzez odpowiednią pielęgnację
+                        przywrócić do życia . Takim elementem był na pewno wysoki żywopłot. Na życzenie klienta
+                        zaproponowane rośliny na rabaty wymagają minimum pracy.</p>
+                    <div fxLayoutAlign="center" style="padding-bottom: 40px;">
+                        <button class="gardening-container__example-projects__div-project__block__button"
+                            mat-raised-button (click)="openProject('second')">SPRAWDŹ
+                            PROJEKT</button>
+                    </div>
+                </div>
+                <div fxFlex="50%" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center">
+                    <img class="gardening-container__example-projects__div-project__block__img" width="250" height="250"
+                        alt="face image" src="../../assets/project-images/second/1-min.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="gardening-container__example-projects__div-project">
+            <div class="gardening-container__example-projects__div-project__block" fxLayout="row" fxLayout.xs="column">
+                <div fxFlex="50%" fxFlex.xs="100%" fxLayout="column">
+                    <h4 class="gardening-container__example-projects__div-project__block__h">Ogród przydomowy - Mrzezino
+                    </h4>
+                    <h5 class="gardening-container__example-projects__div-project__block__h">Projekt: Zofia Dzielińska
+                    </h5>
+                    <p>W tym ogrodzie byliśmy wykonawcami zaplanowanego już ogrodu przez naszą koleżankę , z którą
+                        współpracujemy Zofią Dzielińską. Zaproponowane owalne kształty , przenikające i stykające się z
+                        sobą dały spójność przestrzeni. Ogród kwitnący, tętniący kolorem i życiem wielu owadów. W tym
+                        ogrodzie nie posadziliśmy , ani jednego iglaka . Oprócz mnóstwa bylin, znalazł swoje miejsce
+                        warzywniak i szklarenka.</p>
+                    <div fxLayoutAlign="center" style="padding-bottom: 40px;">
+                        <button class="gardening-container__example-projects__div-project__block__button"
+                            mat-raised-button (click)="openProject('third')">SPRAWDŹ
+                            PROJEKT</button>
+                    </div>
+                </div>
+                <div fxFlex="50%" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center">
+                    <img class="gardening-container__example-projects__div-project__block__img" width="250" height="250"
+                        alt="face image" src="../../assets/project-images/third/1-min.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="gardening-container__example-projects__div-project">
+            <div class="gardening-container__example-projects__div-project__block" fxLayout="row" fxLayout.xs="column">
+                <div fxFlex="50%" fxFlex.xs="100%" fxLayout="column">
+                    <h4 class="gardening-container__example-projects__div-project__block__h">Ogród nad jeziorem - Nadole
+                    </h4>
+                    <h5 class="gardening-container__example-projects__div-project__block__h">Projekt: Zofia Dzielińska
+                    </h5>
+                    <p>Pierwszy nasz tak duży ogród, dlatego na zawsze pozostanie w mojej pamięci. Przedstawiana działka
+                        ma kształt wąskiego prostokąta, z lekkim spadkiem w kierunku jeziora. Zastaliśmy już położone
+                        nawierzchnie . Musieliśmy wkomponować się w istniejące wygrodzone przestrzenie. Ogród
+                        podzieliliśmy na trzy strefy . Pierwsza to przedogródek, reprezentacyjny zapraszający do domu .
+                        Zaproponowana roślinność biegnie w kształcie fali wychodzącej z pierwszego podjazdu , biegnącej
+                        wzdłuż dwóch wejść do budynku. Znalazły tu miejsce róże okrywowe, berberysy , tuje kuliste.
+                        Druga strefa znajduje się z boku budynku i ma charakter leśny , gdyż została wkomponowana w już
+                        istniejące sosny. Znalazły tam miejsce rośliny tolerujące cień : Rododendrony, żurawki, hosty,
+                        rodgersje. Trzecia wydzielona przestrzeń znajduje się po drugiej stronie budynku, blisko
+                        jeziora. W tej części ogrodu przez spadek terenu stworzył się taras , który kończy mała skarpa
+                        Zagospodarowana ona została roślinami zadarniającymi : jałowce, skalniaki, runianka , żurawki.
+                    </p>
+                    <div fxLayoutAlign="center" style="padding-bottom: 40px;">
+                        <button class="gardening-container__example-projects__div-project__block__button"
+                            mat-raised-button (click)="openProject('fourth')">SPRAWDŹ
+                            PROJEKT</button>
+                    </div>
+                </div>
+                <div fxFlex="50%" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center">
+                    <img class="gardening-container__example-projects__div-project__block__img" width="250" height="250"
+                        alt="face image" src="../../assets/project-images/fourth/1-min.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="gardening-container__example-projects__div-project">
+            <div class="gardening-container__example-projects__div-project__block" fxLayout="row" fxLayout.xs="column">
+                <div fxFlex="50%" fxFlex.xs="100%" fxLayout="column">
+                    <h4 class="gardening-container__example-projects__div-project__block__h">Przedogródek - Rumia</h4>
+                    <h5 class="gardening-container__example-projects__div-project__block__h">Projekt: Zofia Dzielińska
+                    </h5>
+                    <p>Mały przedogródek w kształcie litery L. Mały , ale dużo się się dzieje. Rabty wydzieliły łuki i
+                        dla ich podkreślenia zastosowano dwa rodzaje kamienia, ciemny i jasny. Jedna część skąpana w
+                        słońcu , dlatego miejsce znalazły tam trawy i w różnych okresach kwitnące byliny. Z drugiej
+                        strony budynku poprzez zastane drzewa i krzewy zamieszkały rośliny cienia i półcienia. Zakątek
+                        ten mieni się kolorami . Dwie części przedogródka połączył trawnik w kształcie księżyca.</p>
+                    <div fxLayoutAlign="center" style="padding-bottom: 40px;">
+                        <button class="gardening-container__example-projects__div-project__block__button"
+                            mat-raised-button (click)="openProject('fifth')">SPRAWDŹ
+                            PROJEKT</button>
+                    </div>
+                </div>
+                <div fxFlex="50%" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center">
+                    <img class="gardening-container__example-projects__div-project__block__img" width="250" height="250"
+                        alt="face image" src="../../assets/project-images/fifth/1-min.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="gardening-container__example-projects__div-project">
+            <div class="gardening-container__example-projects__div-project__block" fxLayout="row" fxLayout.xs="column">
+                <div fxFlex="50%" fxFlex.xs="100%" fxLayout="column">
+                    <h4 class="gardening-container__example-projects__div-project__block__h">Przestrzeń publiczna przed
+                        blokiem - Rumia</h4>
+                    <h5 class="gardening-container__example-projects__div-project__block__h">Projekt: Zofia Dzielińska
+                    </h5>
+                    <p>Czasami trzeba zaprojektować przestrzeń publiczną , która należy do Wszystkich. Takie miejsca
+                        oprócz funkcji dekoracyjnej muszą być funkcjonalne. Zadbane wejścia , czy przdogródki w blokach
+                        podnoszą atrakcyjność takiego miejsca i cieszą samych mieszkańców, wpływając pozytywnie na ich
+                        samopoczucie , klimat oraz różnorodność biologiczną. Proponowane rośliny powinny być
+                        samoobsługowe , jak i odporne na warunki pogodowe np. susze.</p>
+                    <div fxLayoutAlign="center" style="padding-bottom: 40px;">
+                        <button class="gardening-container__example-projects__div-project__block__button"
+                            mat-raised-button (click)="openProject('sixth')">SPRAWDŹ
+                            PROJEKT</button>
+                    </div>
+                </div>
+                <div fxFlex="50%" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center">
+                    <img class="gardening-container__example-projects__div-project__block__img" width="250" height="250"
+                        alt="face image" src="../../assets/project-images/sixth/1-min.jpg" />
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="gardening-container__img-background">
+    </div>
