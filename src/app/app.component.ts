@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { HostListener} from "@angular/core";
+import { HostListener} from '@angular/core';
+import {Router, NavigationEnd} from '@angular/router';
+import {GoogleAnalyticsService} from './google-analytics.service';
+
+
+declare let ga: Function;
 
 @Component({
   selector: 'app-root',
@@ -8,6 +13,20 @@ import { HostListener} from "@angular/core";
 })
 export class AppComponent {
   title = 'magiaogrodowwebsite';
+
+  constructor(public router: Router, public googleAnalyticsService: GoogleAnalyticsService) {
+
+    this.router.events.subscribe(event => {
+
+      if (event instanceof NavigationEnd) {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+
+      }
+
+    });
+  }
+
   @HostListener('window:scroll', ['$event'])
   doSomething(event) {
     const scrollUpButton = document.getElementById('scroll-up-buttom');
@@ -24,6 +43,7 @@ export class AppComponent {
 
   scrollUpPage() {
     window.scrollTo({top: 0, behavior: 'smooth'});
+    this.googleAnalyticsService.eventEmitter('change position', 'scroll up');
   }
 
 }

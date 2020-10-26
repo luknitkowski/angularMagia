@@ -8,8 +8,6 @@ import { GardeningComponent } from './gardening/gardening.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 
-
-
 const routes: Routes = [
   { path: '', redirectTo: '/o nas', pathMatch: 'full' },
   { path: 'o nas', component: AboutUsComponent },
@@ -32,4 +30,4 @@ export const routingComponents = [
   GardeningComponent,
   ProjectsComponent,
   ContactComponent
-]
+];

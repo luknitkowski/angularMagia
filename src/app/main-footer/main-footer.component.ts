@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser'; 
+import {GoogleAnalyticsService} from '../google-analytics.service';
+
 
 @Component({
   selector: 'app-main-footer',
@@ -8,11 +10,15 @@ import { Meta } from '@angular/platform-browser';
 })
 export class MainFooterComponent implements OnInit {
 
-  constructor(private meta: Meta) {
+  constructor(private meta: Meta, public googleAnalyticsService: GoogleAnalyticsService) {
     meta.addTag({name: 'keywords', content: 'stopka, footer'});
   }
 
   ngOnInit() {
+  }
+
+  forwardFbTrack() {
+    this.googleAnalyticsService.eventEmitter('forward outsite website', 'FB');
   }
 
 }
