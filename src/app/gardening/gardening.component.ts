@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {ProjectDialogComponent} from '../project-dialog/project-dialog.component';
 import { Meta } from '@angular/platform-browser';
-import {GoogleAnalyticsService} from '../google-analytics.service';
 
 @Component({
   selector: 'app-gardening',
@@ -13,13 +12,11 @@ export class GardeningComponent implements OnInit {
   inRow:boolean;
   inColumn:boolean;
 
-  constructor(public dialog: MatDialog, private meta: Meta,
-              public googleAnalyticsService: GoogleAnalyticsService) {
+  constructor(public dialog: MatDialog, private meta: Meta) {
     meta.addTag({name: 'keywords', content: 'zakładanie ogrodów, gardening'});
   }
 
   openProject(nameProject: string): void {
-    this.googleAnalyticsService.eventEmitter('zakladanie ogrodow', 'projekty', nameProject);
     const dialogRef = this.dialog.open(ProjectDialogComponent, {
       panelClass: 'my-dialog',
       data: nameProject

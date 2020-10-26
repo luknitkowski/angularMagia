@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {GoogleAnalyticsService} from '../google-analytics.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -8,13 +7,12 @@ import {GoogleAnalyticsService} from '../google-analytics.service';
 })
 export class MainMenuComponent implements OnInit {
 
-  constructor(public googleAnalyticsService: GoogleAnalyticsService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
   trackMenuOption(option) {
-    this.googleAnalyticsService.eventEmitter('Menu option', option);
   }
 
 

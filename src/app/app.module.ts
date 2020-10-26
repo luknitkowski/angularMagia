@@ -30,7 +30,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ImagesForGardenComponent } from './images-for-garden/images-for-garden.component';
 import { DialogPlantImageComponent } from './dialog-plant-image/dialog-plant-image.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {GoogleAnalyticsService} from './google-analytics.service';
 
 @NgModule({
   declarations: [
@@ -68,7 +67,7 @@ import {GoogleAnalyticsService} from './google-analytics.service';
     MatSnackBarModule
   ],
   entryComponents: [ProjectDialogComponent, DialogPlantImageComponent],
-  providers: [MarkerService, GoogleAnalyticsService],
+  providers: [MarkerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

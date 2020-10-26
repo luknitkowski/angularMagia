@@ -6,7 +6,7 @@
         <p>Jeśli masz pytania to napisz do nas, a napewno Ci odpowiemy! Dane kontaktowe
             znajdują się u dołu strony.</p>
     </div>
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" fxLayout="column" class="contact-container__form">
+    <form *ngIf="false" #f="ngForm" (ngSubmit)="onSubmit(f)" fxLayout="column" class="contact-container__form">
         <mat-form-field class="contact-container__form__field">
             <input matInput placeholder="Twoje Imię i Nazwisko" name="name" ngModel required #name="ngModel">
             <mat-error *ngIf="name.errors && (name.invalid || name.touched)">
